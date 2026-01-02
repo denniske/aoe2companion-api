@@ -1,0 +1,19 @@
+meta {
+  name: lobbies by profile_ids
+  type: ws
+  seq: 2
+}
+
+ws {
+  url: {{socketHost}}/listen?handler=lobbies&profile_ids=5309433
+  body: ws
+  auth: inherit
+}
+
+body:ws {
+  name: message 1
+  type: json
+  content: '''
+    {}
+  '''
+}

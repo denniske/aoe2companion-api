@@ -1,0 +1,20 @@
+meta {
+  name: list dumps
+  type: http
+  seq: 9
+}
+
+get {
+  url: {{host}}/api/dump/list
+  body: none
+  auth: inherit
+}
+
+headers {
+  User-Agent: {{userAgent}}
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

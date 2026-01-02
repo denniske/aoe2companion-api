@@ -1,0 +1,26 @@
+meta {
+  name: profile
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/profiles/196240?language=de&extend=avatar_medium_url,avatar_full_url&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  language: de
+  extend: avatar_medium_url,avatar_full_url
+  page: 1
+}
+
+headers {
+  User-Agent: {{userAgent}}
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

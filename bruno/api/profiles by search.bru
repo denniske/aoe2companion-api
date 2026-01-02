@@ -1,0 +1,26 @@
+meta {
+  name: profiles by search
+  type: http
+  seq: 2
+}
+
+get {
+  url: {{host}}/api/profiles?search=viper&extend=profiles.avatar_medium_url,profiles.avatar_full_url&page=1
+  body: none
+  auth: inherit
+}
+
+params:query {
+  search: viper
+  extend: profiles.avatar_medium_url,profiles.avatar_full_url
+  page: 1
+}
+
+headers {
+  User-Agent: {{userAgent}}
+}
+
+settings {
+  encodeUrl: false
+  timeout: 0
+}

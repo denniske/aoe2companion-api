@@ -1,0 +1,19 @@
+meta {
+  name: lobbies
+  type: ws
+  seq: 2
+}
+
+ws {
+  url: {{socketHost}}/listen?handler=lobbies
+  body: ws
+  auth: inherit
+}
+
+body:ws {
+  name: message 1
+  type: json
+  content: '''
+    {}
+  '''
+}

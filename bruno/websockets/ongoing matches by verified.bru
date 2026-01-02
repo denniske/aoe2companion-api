@@ -1,0 +1,19 @@
+meta {
+  name: ongoing matches by verified
+  type: ws
+  seq: 7
+}
+
+ws {
+  url: {{socketHost}}/listen?handler=ongoing-matches&verified=true
+  body: ws
+  auth: inherit
+}
+
+body:ws {
+  name: message 1
+  type: json
+  content: '''
+    {}
+  '''
+}

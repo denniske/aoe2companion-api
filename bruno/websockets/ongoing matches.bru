@@ -1,11 +1,11 @@
 meta {
-  name: lobbies by profile_ids
+  name: ongoing matches
   type: ws
-  seq: 2
+  seq: 5
 }
 
 ws {
-  url: {{socketHost}}/listen?handler=lobbies&profile_ids=5309433
+  url: {{socketHost}}/listen?handler=ongoing-matches
   body: ws
   auth: inherit
 }

@@ -1,11 +1,11 @@
 meta {
-  name: lobbies
+  name: lobbies by verified
   type: ws
-  seq: 2
+  seq: 3
 }
 
 ws {
-  url: {{socketHost}}/listen?handler=lobbies
+  url: {{socketHost}}/listen?handler=lobbies&verified=true
   body: ws
   auth: inherit
 }

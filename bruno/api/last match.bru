@@ -1,19 +1,20 @@
 meta {
-  name: profile + stats
+  name: last match
   type: http
-  seq: 5
+  seq: 2
 }
 
 get {
-  url: {{host}}/api/profiles/196240?language=de&extend=stats&page=1
+  url: {{host}}/api/matches?profile_ids=196240&use_enums=true&page=1&per_page=1
   body: none
   auth: inherit
 }
 
 params:query {
-  language: de
-  extend: stats
+  profile_ids: 196240
+  use_enums: true
   page: 1
+  per_page: 1
 }
 
 headers {

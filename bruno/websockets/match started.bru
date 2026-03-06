@@ -1,0 +1,19 @@
+meta {
+  name: match started
+  type: ws
+  seq: 8
+}
+
+ws {
+  url: {{socketHost}}/listen?handler=match-started
+  body: ws
+  auth: inherit
+}
+
+body:ws {
+  name: message 1
+  type: json
+  content: '''
+    {}
+  '''
+}

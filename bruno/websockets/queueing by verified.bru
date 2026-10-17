@@ -1,0 +1,19 @@
+meta {
+  name: queueing by verified
+  type: ws
+  seq: 10
+}
+
+ws {
+  url: {{socketHost}}/listen?handler=queueing&verified=true
+  body: ws
+  auth: inherit
+}
+
+body:ws {
+  name: message 1
+  type: json
+  content: '''
+    {}
+  '''
+}
